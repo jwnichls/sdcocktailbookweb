@@ -1,0 +1,7 @@
+== To Do List
+
+* Create account, sign form, prior to first cocktail submission
+* Front page content
+* Styling
+* E-mail Verification?
+* Password Recovery

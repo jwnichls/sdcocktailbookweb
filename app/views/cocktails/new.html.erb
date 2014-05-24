@@ -1,0 +1,83 @@
+<% if current_user == nil -%>
+
+	<%- model_class = User -%>
+	<div class="page-header">
+	  <h1>Welcome!</h1>
+	</div>
+
+	<h4>Thanks for considering submitting cocktail recipes to the San Diego Cocktail Book project!</h4>
+	
+	<p>
+		Before you enter your recipes, we need to collect some contact information and take care of 
+		some legal issues.  The contact information will be used only to communicate with you about
+		the book.  The legal agreement allows us to publish your recipes and any other content you 
+		submit to us, however you retain full ownership and rights to anything you submit.  It
+		also protects us in the event that you submit information to which you do not own the rights
+		(so please make sure that you do!).
+	</p>
+
+	<%= render "shared/error_messages", :target => @user %>
+
+	<%= form_for @user do |f| %>
+
+	  <h5>Contact Information</h5>
+	
+	  <div class="form-group">
+	    <%= f.label "Your full name:" %>
+	    <%= f.text_field :name, :class => 'form-control' %>
+	  </div>
+
+	  <div class="form-group">
+	    <%= f.label "Your e-mail address:" %>
+	    <%= f.text_field :email, :class => 'form-control' %>
+		<span class="help-block">We'll only use this contact you about the book.</span>
+	  </div>
+
+	  <div class="form-group">
+	    <%= f.label "Your current employer:" %>
+	    <%= f.text_field :employer, :class => 'form-control' %>
+		<span class="help-block">OPTIONAL. This will help us plan photography sessions, etc.</span>
+	  </div>
+
+	  <div class="form-group">
+	    <%= f.label "Password:", :class => 'control-label' %>
+	    <%= f.password_field :password, :class => 'password' %>
+		<span class="help-block">Providing a password allows you to edit your submissions later.</span>
+	  </div>
+
+	  <div class="form-group">
+	    <%= f.label "Password Confirmation:", :class => 'control-label' %>
+	    <%= f.password_field :password_confirmation, :class => 'password' %>
+	  </div>
+
+	  <p>
+		Now for the legal agreement.  Please read this fully!
+	  </p>
+
+	  <div class="well">
+		<%= render :partial => 'shared/agreement' %>
+	  </div>
+
+	  <div class="form-group">
+	    <%= f.label "Please initial here to confirm you agree to the above terms:", :class => 'control-label' %>
+	    <div class="controls">
+	      <%= f.text_field :initials, :class => 'text_field' %>
+	    </div>
+	  </div>
+
+	  <div class="form-actions">
+	    <%= f.submit "Agree and Continue", :class => 'btn btn-primary' %>
+	    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+	                root_url, :class => 'btn' %>
+	  </div>
+	<% end %>	
+<% else -%>
+	<%- model_class = Cocktail -%>
+	<div class="page-header">
+	  <h1>Submit Cocktail</h1>
+	</div>
+	
+	<%= render "shared/error_messages", :target => @cocktail %>
+	
+	<%= render :partial => 'form' %>
+<% end -%>

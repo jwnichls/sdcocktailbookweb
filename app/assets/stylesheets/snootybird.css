@@ -1,0 +1,30 @@
+.drink-title {
+	background-color: rgb(67,66,72);
+	background-image: url(/assets/title-image-01.png);
+	background-repeat: no-repeat;
+	background-size: auto 547px;
+	background-position: center top;
+	min-height: 547px;
+}
+
+.navbar-transparent {
+	background-color: transparent;
+	border: 0px;
+}
+
+.title-body {
+}
+
+h1.h1-title {
+	font-size: 50px;
+	color: rgb(215,227,215);
+	padding-top: 50px;
+}
+
+p.subtitle {
+	color: rgb(180,180,180);
+}
+
+.bird-image {
+	height: 50px;
+}
