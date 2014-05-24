@@ -1,4 +1,5 @@
 .drink-title {
+	padding-top: 0px;
 	background-color: rgb(67,66,72);
 	background-image: url(/assets/title-image-01.png);
 	background-repeat: no-repeat;
@@ -10,6 +11,7 @@
 .navbar-transparent {
 	background-color: transparent;
 	border: 0px;
+	height: 50px;
 }
 
 .title-body {
@@ -18,11 +20,13 @@
 h1.h1-title {
 	font-size: 50px;
 	color: rgb(215,227,215);
-	padding-top: 50px;
+	padding-top: 40px;
 }
 
 p.subtitle {
 	color: rgb(180,180,180);
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .bird-image {

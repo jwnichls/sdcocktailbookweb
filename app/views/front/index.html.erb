@@ -9,23 +9,24 @@
 </head>
 <body class="title-body">
 
-	<div class="navbar navbar-default navbar-transparent navbar-fixed-top" role="navigation">
-		<div class="container">
-	        <ul class="nav navbar-nav pull-right">
-				<li><a href="http://blog.whatdididrink.com/">Blog</a></li>
-			  <% if current_user != nil -%>
-	          	<li><%= link_to "My Cocktails", cocktails_path %></li>
-			  <% end -%>
-			  <% if current_user == nil -%>
-				<li><%= link_to "Login", login_path %></li>
-			  <% else -%>
-				<li><%= link_to "Logout", logout_path %></li>
-			  <% end -%>
-			</ul>
-	    </div>
-	</div>
-
 	<div class="jumbotron drink-title">
+
+		<div class="navbar navbar-default navbar-transparent" role="navigation">
+			<div class="container">
+		        <ul class="nav navbar-nav pull-right">
+					<li><a href="http://blog.whatdididrink.com/">Blog</a></li>
+				  <% if current_user != nil -%>
+		          	<li><%= link_to "My Cocktails", cocktails_path %></li>
+				  <% end -%>
+				  <% if current_user == nil -%>
+					<li><%= link_to "Login", login_path %></li>
+				  <% else -%>
+					<li><%= link_to "Logout", logout_path %></li>
+				  <% end -%>
+				</ul>
+		    </div>
+		</div>
+
 		<div class="container">
 			<div class="col-xs-6">
 				<h1 class="h1-title">
@@ -34,12 +35,41 @@
 					Project
 				</h1>
 				<p class="subtitle">
-					Some really awesome and convincing text goes here.
+					Celebrating the wealth and breadth of San Diego cocktail culture with contributions from area bartenders.
 				</p>
 				<p><a class="btn btn-primary btn-lg" role="button">Submit your cocktail!</a></p>
 			</div>
 		</div>
 	</div>
 	
+	<div class="container">
+		<h2>Our Vision</h2>
+		
+		<p>
+			Why are we doing this?  What are our goals?
+		</p>
+
+		<h2>Book #1</h2>
+		
+		<!-- Stuff From Blurb -->
+		<div style='text-align:left; width:700px'>
+		  <object class='myWidget' data='http://www.blurb.com/assets/embed.swf' height='350' type='application/x-shockwave-flash' width='700'>
+		    <param name='allowFullScreen' value='true' />
+		    <param name='wmode' value='transparent' />
+		    <param name='allowScriptAccess' value='always' />
+		    <param name='movie' value='http://www.blurb.com/assets/embed.swf' />
+		    <param name='FlashVars' value='book_id=4908138&amp;locale=en_US' />
+		    <a href='http://www.blurb.com/books/4908138' target='_new'>
+		      <img src='http://assets3.blurb.com/images/uploads2/catalog/002/721/821/5290274-3321526b4aea6d4b45327e420147b089.jpg' />
+		    </a>
+		  </object>
+		</div>
+		
+		<h2>Us</h2>
+		
+		<p>
+			Images and bios go here.
+		</p>
+	</div>
 </body>
 </html>
