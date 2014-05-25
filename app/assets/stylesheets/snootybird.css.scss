@@ -1,6 +1,6 @@
 .drink-title {
 	padding-top: 0px;
-	background-color: rgb(67,66,72);
+	background-color: rgb(66,66,64);
 	background-image: asset-url("title-image-01.png");
 	background-repeat: no-repeat;
 	background-size: auto 547px;
@@ -17,8 +17,13 @@
 .title-body {
 }
 
+.title-column {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
 h1.h1-title {
-	font-size: 50px;
+	font-size: 45px;
 	color: rgb(215,227,215);
 	padding-top: 20px;
 }
@@ -80,6 +85,11 @@ div.rowspace25 {
 	margin-bottom: auto;
 }
 
-p.spaced {
+.spaced {
 	margin-top: 30px !important;
+}
+
+#backup-book-image {
+	width: 100%;
+	max-width: 350px;
 }
