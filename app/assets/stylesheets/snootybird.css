@@ -20,15 +20,54 @@
 h1.h1-title {
 	font-size: 50px;
 	color: rgb(215,227,215);
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 p.subtitle {
 	color: rgb(180,180,180);
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .bird-image {
 	height: 50px;
+}
+
+img.image-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.bio-image {
+	height: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.testborder {
+	border: 5px;
+	border-color: rgb(0,0,0);
+}
+
+div.rowspace50 {
+	padding-top: 50px;
+}
+
+div.rowspace25 {
+	padding-top: 25px;
+}
+
+.footer {
+	margin-top: 75px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background-color: rgb(215,227,215);
+	color: rgb(140,140,140);
+}
+
+.footer-content {
+	margin-top: auto;
+	margin-bottom: auto;
 }
