@@ -51,6 +51,14 @@ div.testborder {
 	border-color: rgb(0,0,0);
 }
 
+div.rowspace100 {
+	padding-top: 100px;
+}
+
+div.rowspace75 {
+	padding-top: 75px;
+}
+
 div.rowspace50 {
 	padding-top: 50px;
 }
@@ -70,4 +78,8 @@ div.rowspace25 {
 .footer-content {
 	margin-top: auto;
 	margin-bottom: auto;
+}
+
+p.spaced {
+	margin-top: 30px !important;
 }
