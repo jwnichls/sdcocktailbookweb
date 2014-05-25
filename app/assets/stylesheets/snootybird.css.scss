@@ -18,13 +18,21 @@
 }
 
 .title-column {
-	padding-right: 0px;
 	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.jumbotron {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.title-color {
+	color: rgb(215,227,215) !important;
 }
 
 h1.h1-title {
 	font-size: 45px;
-	color: rgb(215,227,215);
 	padding-top: 20px;
 }
 

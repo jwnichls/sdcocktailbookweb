@@ -13,23 +13,33 @@
 
 		<div class="navbar navbar-default navbar-transparent" role="navigation">
 			<div class="container">
-		        <ul class="nav navbar-nav pull-right">
-					<li><a href="http://blog.whatdididrink.com/">Blog</a></li>
-				  <% if current_user != nil -%>
-		          	<li><%= link_to "My Cocktails", cocktails_path %></li>
-				  <% end -%>
-				  <% if current_user == nil -%>
-					<li><%= link_to "Login", login_path %></li>
-				  <% else -%>
-					<li><%= link_to "Logout", logout_path %></li>
-				  <% end -%>
-				</ul>
+				<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+					</button>
+		      	</div>
+		      	<div class="collapse navbar-collapse" id="navbar-collapse">
+			        <ul class="nav navbar-nav pull-right">
+					  <% if current_user != nil -%>
+			          	<li><%= link_to "My Cocktails", cocktails_path %></li>
+					  <% end -%>
+						<li><a href="http://blog.whatdididrink.com/">Blog</a></li>
+					  <% if current_user == nil -%>
+						<li><%= link_to "Login", login_path %></li>
+					  <% else -%>
+						<li><%= link_to "Logout", logout_path %></li>
+					  <% end -%>
+					</ul>
+				</div>
 		    </div>
 		</div>
 
 		<div class="container">
 			<div class="col-xs-6 title-column">
-				<h1 class="h1-title">
+				<h1 class="h1-title title-color">
 					San Diego<br/>
 					Cocktail Book<br/> 
 					Project
@@ -37,7 +47,7 @@
 				<p class="subtitle">
 					Celebrating the wealth and breadth of San Diego cocktail culture with contributions from area bartenders.
 				</p>
-				<p><a class="btn btn-primary btn-lg" role="button">Submit your cocktail!</a></p>
+				<p><%= link_to "Submit your cocktail!", new_cocktail_path, :class => "btn btn-primary btn-lg", :role => "button" %></p>
 			</div>
 		</div>
 	</div>
@@ -48,8 +58,8 @@
 				<h2 class="text-center">our vision</h2>
 		
 				<p class="spaced">
-					We think San Diego is great cocktail town with a great breadth of interesting
-					people creating and serving up great drinks.  Unfortunately, except for a couple
+					We think San Diego is a great cocktail town with a huge breadth of interesting
+					people creating and serving up quality drinks.  Unfortunately, except for a couple
 					of the best known spots, we don't think the cocktail culture in this city gets
 					enough of the publicity and acclaim outside of the city as it should.  When 
 					people think of west coast cocktail cities, they think of Portland, San Francisco,
@@ -111,7 +121,7 @@
 				</p>
 				
 				<p class="spaced text-center">
-					<a class="btn btn-primary btn-lg" role="button">Submit your cocktail!</a>
+					<%= link_to "Submit your cocktail!", new_cocktail_path, :class => "btn btn-primary btn-lg", :role => "button" %>
 				</p>
 			</div>
 		</div>

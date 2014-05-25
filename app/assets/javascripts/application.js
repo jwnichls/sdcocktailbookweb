@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(function () {
+
+	$('#navbar-collapse').on('show.bs.collapse', function () {
+		$('#navbar-collapse').addClass("navbar-inverse").removeClass("navbar-default navbar-transparent");
+	})
+
+	$('#navbar-collapse').on('hidden.bs.collapse', function () {
+		$('#navbar-collapse').addClass("navbar-default navbar-transparent").removeClass("navbar-inverse");
+	})
+	
+})
