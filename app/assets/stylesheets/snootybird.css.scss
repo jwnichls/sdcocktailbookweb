@@ -1,11 +1,11 @@
 .drink-title {
 	padding-top: 0px;
 	background-color: rgb(66,66,64);
-	background-image: asset-url("title-image-01.png");
+	background-image: asset-url("title-image-02.png");
 	background-repeat: no-repeat;
-	background-size: auto 547px;
+	background-size: auto 750px;
 	background-position: center top;
-	min-height: 547px;
+	min-height: 750px;
 }
 
 .navbar-transparent {
@@ -98,6 +98,8 @@ div.rowspace25 {
 }
 
 #backup-book-image {
-	width: 100%;
-	max-width: 350px;
+	display: block;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
 }

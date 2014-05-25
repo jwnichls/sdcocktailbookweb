@@ -47,7 +47,7 @@
 				<p class="subtitle">
 					Celebrating the wealth and breadth of San Diego cocktail culture with contributions from area bartenders.
 				</p>
-				<p><%= link_to "Submit your cocktail!", new_cocktail_path, :class => "btn btn-primary btn-lg", :role => "button" %></p>
+				<p><%= link_to "Submit your cocktails!", new_cocktail_path, :class => "btn btn-primary btn-lg", :role => "button" %></p>
 			</div>
 		</div>
 	</div>
@@ -92,7 +92,7 @@
 					coffee table book, yet include enough instruction to get newbies off the ground.
 				</p>
 				
-				<div style='width:350px; margin-top: 30px;'>
+				<div style='width: 100%; margin-top: 30px;'>
 				  <object class='myWidget' data='http://www.blurb.com/assets/embed.swf' height='200' type='application/x-shockwave-flash' width='350'>
 				    <param name='allowFullScreen' value='true' />
 				    <param name='wmode' value='transparent' />
@@ -100,11 +100,10 @@
 				    <param name='movie' value='http://www.blurb.com/assets/embed.swf' />
 				    <param name='FlashVars' value='book_id=4908138&amp;locale=en_US' />
 				    <a href='http://www.blurb.com/books/4908138' target='_new'>
-				      <img src='http://assets3.blurb.com/images/uploads2/catalog/002/721/821/5290274-3321526b4aea6d4b45327e420147b089.jpg' id="backup-book-image"/>
+				      	<img src='http://assets3.blurb.com/images/uploads2/catalog/002/721/821/5290274-3321526b4aea6d4b45327e420147b089.jpg' id="backup-book-image"/>
 				    </a>
 				  </object>
 				</div>
-				
 			</div>
 		</div>
 		
@@ -117,11 +116,13 @@
 				</p>
 
 				<p class="spaced">
-					
+					Click the button below to get started.  We would like to have most 
+					recipes submitted by <strong>June 30, 2014</strong>, but we will
+					consider submissions through the end of the summer.
 				</p>
 				
 				<p class="spaced text-center">
-					<%= link_to "Submit your cocktail!", new_cocktail_path, :class => "btn btn-primary btn-lg", :role => "button" %>
+					<%= link_to "Submit your cocktails!", new_cocktail_path, :class => "btn btn-primary btn-lg", :role => "button" %>
 				</p>
 			</div>
 		</div>
@@ -139,8 +140,8 @@
 			</div>
 		</div>
 		
-		<div class="row rowspace50">
-			<div class="col-md-3 col-md-offset-2 testborder">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-2 testborder rowspace50">
 				<%= image_tag "jeff_reasonably_small.jpg", :class => 'bio-image' %>
 				
 				<h5 class="text-center">Jeffrey Nichols</h5>
@@ -153,7 +154,7 @@
 				</p>
 			</div>
 			
-			<div class="col-md-3 col-md-offset-2 testborder">
+			<div class="col-md-3 col-md-offset-2 testborder rowspace50">
 				<%= image_tag "jordan_small.jpg", :class => 'bio-image' %>
 				
 				<h5 class="text-center">Clayton Jordan III</h5>
