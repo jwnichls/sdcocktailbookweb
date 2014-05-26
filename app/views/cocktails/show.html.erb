@@ -1,16 +1,17 @@
 <%- model_class = Cocktail -%>
+
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h3><%= @cocktail.name %></h3>
+  <p>
+	<small>By <%= @cocktail.user.name %></small>
+  </p>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @cocktail.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:recipe) %>:</strong></dt>
-  <dd><%= @cocktail.recipe %></dd>
-</dl>
+<pre>
+<%= @cocktail.recipe %>
+</pre>
 
-<div class="form-actions">
+<div class="form-actions spaced">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               cocktails_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),

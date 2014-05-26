@@ -65,19 +65,19 @@ div.testborder {
 }
 
 div.rowspace100 {
-	padding-top: 100px;
+	padding-top: 100px !important;
 }
 
 div.rowspace75 {
-	padding-top: 75px;
+	padding-top: 75px !important;
 }
 
 div.rowspace50 {
-	padding-top: 50px;
+	padding-top: 50px !important;
 }
 
 div.rowspace25 {
-	padding-top: 25px;
+	padding-top: 25px !important;
 }
 
 .footer {
@@ -95,6 +95,10 @@ div.rowspace25 {
 
 .spaced {
 	margin-top: 30px !important;
+}
+
+.smallspaced {
+	margin-top: 10px !important;
 }
 
 #backup-book-image {

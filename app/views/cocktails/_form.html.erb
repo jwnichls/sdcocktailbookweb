@@ -1,16 +1,64 @@
-<%= form_for @cocktail do |f| %>
-  <div class="form-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <%= f.text_field :name, :class => 'text_field' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :recipe, :class => 'control-label' %>
-    <%= f.text_area :recipe, :class => 'text_area' %>
-  </div>
+<div class="row">
+	<div class="col-md-4">
+		
+		<div class="panel panel-primary">
+			<div class="panel-heading"><strong>Tips</strong></div>
+		
+			<div class="panel-body">
+				<small>
+				<ul style="padding-left: 20px;">
+					<li class="smallspaced">
+						Please include ingredients, proportions, and preparation
+						instructions.  We would like to be able to validate each
+						recipe by making it ourselves.
+					</li>
+			
+					<li class="smallspaced">
+						If the drink contains an ingredient that is prepared in 
+						advance, such as a flavored syrup or foam, please also
+						include instructions for making this ingredient.
+					</li>
+			
+					<li class="smallspaced">
+						Feel free to include a story or anything else that is 
+						interesting about the recipe.  We will do our best to 
+						include such stories and anecdotes in the book.
+					</li>
+					
+					<li class="smallspaced">
+						Submit as many recipes as you would like.  We expect to 
+						choose a maximum of two to appear in the book.
+					</li>
+					
+					<li class="smallspaced">
+						If you do submit more than one recipe, consider including
+						recipes that would suit a range of audiences, from the 
+						mainstream to esoteric.
+					</li>
+				</ul>
+				</small>
+			</div>
+		</div>
+	</div>
 
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                cocktails_path, :class => 'btn' %>
-  </div>
-<% end %>
+	<div class="col-md-8">
+		<%= render "shared/error_messages", :target => @cocktail %>
+
+		<%= form_for @cocktail do |f| %>
+		  <div class="form-group">
+		    <%= f.label :name, :class => 'control-label' %>
+		    <%= f.text_field :name, :class => 'form-control' %>
+		  </div>
+		  <div class="form-group">
+		    <%= f.label :recipe, :class => 'control-label' %>
+		    <%= f.text_area :recipe, :class => 'form-control', :rows => 20 %>
+		  </div>
+
+		  <div class="form-actions">
+		    <%= f.submit nil, :class => 'btn btn-primary' %>
+		    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+		                cocktails_path, :class => 'btn' %>
+		  </div>
+		<% end %>
+	</div>
+</div>

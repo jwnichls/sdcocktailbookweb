@@ -24,5 +24,13 @@ $(function () {
 	$('#navbar-collapse').on('hidden.bs.collapse', function () {
 		$('#navbar-collapse').addClass("navbar-default navbar-transparent").removeClass("navbar-inverse");
 	})
+
+	// Force the footer to the bottom of the page if it ordinarily would be in the middle of the screen
+	var docHeight = $(window).height();
+	var footerHeight = $('#footer').height();
+	var footerTop = $('#footer').position().top + footerHeight;
 	
+	if (footerTop < docHeight) {
+		$('#footer').css('margin-top', (docHeight - footerTop) + 'px');
+	}
 })

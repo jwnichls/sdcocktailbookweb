@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
 
+  def agreement
+    @user = current_user
+  end
+
   def create
     @user = User.new(params[:user])
+    @user.signed_date = Time.now
 
     if @user.save
       flash[:notice] = "Your account has been created."

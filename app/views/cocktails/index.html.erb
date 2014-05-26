@@ -1,7 +1,25 @@
 <%- model_class = Cocktail -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Your Cocktails</h1>
 </div>
+
+<% if @cocktails.length > 0 -%>
+<p class="spaced">
+	<strong>Thanks for submitting <% if @cocktails.length > 1 -%>cocktail recipes<% else -%>a cocktail recipe<% end -%>
+	to the San Diego Cocktail Book Project!</strong>  We will be in contact soon via the e-mail address that you provided.  
+	If you need to reach out to us, please <a href="mailto:jeff@jeffreynichols.com">send an e-mail to Jeff</a>.
+</p>
+<% end -%>
+
+<p class="smallspaced">
+	If you need to edit your contact information, <%= link_to "click here", edit_users_path %>.
+</p>
+
+<p class="smallspaced">
+	You agreed to the intellectual property agreement on <%= current_user.signed_date %> with the initials <%= current_user.initials %>.
+	To view the agreement again, <%= link_to "click here", agreement_path %>.
+</p>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -12,8 +30,8 @@
   <tbody>
     <% @cocktails.each do |cocktail| %>
       <tr>
-        <td><%= link_to cocktail.name, cocktail_path(cocktail) %></td>
-        <td>
+        <td style="vertical-align: middle;"><%= link_to cocktail.name, cocktail_path(cocktail) %></td>
+        <td class="text-right">
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_cocktail_path(cocktail), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
