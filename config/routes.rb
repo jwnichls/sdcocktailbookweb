@@ -19,6 +19,9 @@ Snootysubmit::Application.routes.draw do
   # Cocktail Resources
   resources :cocktails
 
+  # Admin Routes
+  match 'admin' => 'admin#index', :as => :admin
+
   # Root
   root :to => "front#index"
 

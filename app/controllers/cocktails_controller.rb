@@ -17,7 +17,7 @@ class CocktailsController < ApplicationController
   def show
     @cocktail = Cocktail.find(params[:id])
     
-    unless @cocktail.user.id != current_user.id
+    unless @cocktail.user.id != current_user.id and !current_user.admin?
       respond_to do |format|
         format.html # show.html.erb
         format.json { render json: @cocktail }
@@ -44,7 +44,7 @@ class CocktailsController < ApplicationController
   def edit
     @cocktail = Cocktail.find(params[:id])
     
-    if @cocktail.user != current_user
+    if @cocktail.user != current_user and !current_user.admin?
       flash[:notice] = "You are not allowed to edit this cocktail"
       redirect_to root_url
     end
@@ -73,7 +73,7 @@ class CocktailsController < ApplicationController
   def update
     @cocktail = Cocktail.find(params[:id])
 
-    unless @cocktail.user != current_user
+    unless @cocktail.user != current_user and !current_user.admin?
       respond_to do |format|
         if @cocktail.update_attributes(params[:cocktail])
           format.html { redirect_to @cocktail, notice: 'Cocktail was successfully updated.' }
@@ -94,7 +94,7 @@ class CocktailsController < ApplicationController
   def destroy
     @cocktail = Cocktail.find(params[:id])
 
-    unless @cocktail.user != current_user
+    unless @cocktail.user != current_user and !current_user.admin?
       @cocktail.destroy
 
       respond_to do |format|

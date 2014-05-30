@@ -35,6 +35,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_admin
+    logger.debug "ApplicationController::require_admin"
+    unless current_user and current_user.admin?
+      redirect_to root_url
+      return false
+    end
+  end
+
   def store_location
     session[:return_to] = request.url
   end

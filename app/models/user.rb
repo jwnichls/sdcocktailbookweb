@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   validates :email, :presence => true
   validates :name, :presence => true
   validates :initials, :presence => true
+  
+  def admin?
+    self.admin
+  end
 end
