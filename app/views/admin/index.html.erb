@@ -9,6 +9,7 @@
     <tr>
       <th>Name</th>
 	  <th>Author</th>
+	  <th>Workplace</th>
 	  <th>Created On</th>
       <th></th>
     </tr>
@@ -18,7 +19,8 @@
       <tr>
         <td style="vertical-align: middle;"><%= link_to cocktail.name, cocktail_path(cocktail) %></td>
 		<td style="vertical-align: middle;"><%= cocktail.user != nil ? cocktail.user.name : "Unknown" %></td>
-		<td style="vertical-algin: middle;"><%= cocktail.created_at.strftime("%B %d, %Y") %></td>
+		<td style="vertical-align: middle;"><%= cocktail.user != nil ? cocktail.user.employer : "Unknown" %></td>
+		<td style="vertical-align: middle;"><%= cocktail.created_at.strftime("%B %d, %Y") %></td>
         <td class="text-right">
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_cocktail_path(cocktail), :class => 'btn btn-mini' %>
