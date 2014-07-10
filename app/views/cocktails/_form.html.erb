@@ -53,6 +53,12 @@
 		    <%= f.label :recipe, :class => 'control-label' %>
 		    <%= f.text_area :recipe, :class => 'form-control', :rows => 20 %>
 		  </div>
+		  <% if current_user and current_user.admin? -%>
+		    <div class="form-group">
+			  <%= f.label :image, :class => 'control-label' %>
+			  <%= f.file_field :image %>
+		    </div>
+		  <% end -%>
 
 		  <div class="form-actions">
 		    <%= f.submit nil, :class => 'btn btn-primary' %>
