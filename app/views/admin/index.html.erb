@@ -18,7 +18,7 @@
   <tbody>
     <% @cocktails.each do |cocktail| %>
       <tr>
-		<td style="vertical-align: middle;"><%= image_tag cocktail.image_url(:small).to_s %></td>
+		<td style="vertical-align: middle;"><% if cocktail.image_url(:small).to_s != "" %><%= image_tag cocktail.image_url(:small).to_s %><% end -%></td>
         <td style="vertical-align: middle;"><%= link_to cocktail.name, cocktail_path(cocktail) %></td>
 		<td style="vertical-align: middle;"><%= cocktail.user != nil ? cocktail.user.name : "Unknown" %></td>
 		<td style="vertical-align: middle;"><%= cocktail.user != nil ? cocktail.user.employer : "Unknown" %></td>
