@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+# lock '3.2.1'
 
 set :application, 'snootybird'
 set :repo_url, 'git@github.com:jwnichls/sdcocktailbookweb.git'
@@ -73,8 +73,6 @@ namespace :uploads do
     end
   end
   
-  after :deploy, :symlink do 
-    invoke 'uploads:symlink'
-  end
+  after "deploy:symlink:release", "uploads:symlink"
 
 end

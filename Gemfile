@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.18'
+gem 'rails', '3.2.22'
 gem 'mysql2'
+gem 'activerecord-mysql2-adapter'
+gem 'test-unit'
 
 gem 'authlogic'
 gem 'scrypt'
@@ -14,10 +16,8 @@ gem 'scrypt'
 #  gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 #end
 
-gem 'sprockets-rails', '=2.0.0.backport1'
-gem 'sprockets', '=2.2.2.backport2'
-gem 'sass-rails', github: 'guilleiguaran/sass-rails', branch: 'backport'
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap-sass', '~> 3.1.1.0'
+gem 'sass-rails', '>= 3.2'
 
 gem 'jquery-rails'
 
